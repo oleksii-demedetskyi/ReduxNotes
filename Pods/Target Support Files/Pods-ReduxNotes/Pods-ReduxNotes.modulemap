@@ -1,0 +1,6 @@
+framework module Pods_ReduxNotes {
+  umbrella header "Pods-ReduxNotes-umbrella.h"
+
+  export *
+  module * { export * }
+}
