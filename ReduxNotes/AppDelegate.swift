@@ -87,56 +87,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             store.observe(with: presenter.present)
         }
         
-        func connectFirebase() {
-            FirebaseApp.configure()
-            
-            Auth.auth().signInAnonymously { (user, error) in
-                let database = Database.database().reference()
-                let commonNotes = database.child("notes/common")
-                
-                func handleData(snapshot data: DataSnapshot) {
-                    guard let notesArray = data.value as? [Any] else {
-                        return
-                    }
-                    
-                    var notes: [NoteInfo] = []
-                    for anyNote in notesArray {
-                        guard let note = anyNote as? [String: String] else { return}
-                        guard let id = note["id"] else { return }
-                        guard let text = note["text"] else { return }
-                        
-                        notes.append(NoteInfo(id: id, text: text))
-                    }
-                    
-                    store.dispatch(action: UpdateCommonNotes(notes: notes))
-                }
-                
-                commonNotes.observeSingleEvent(of: .value) { data in
-                    handleData(snapshot: data)
-                    
-                    store.observe { state in
-                        let notes: [[String: String]] = state.commonNotes.ids.map { id in
-                            guard let note = state.allNotes.byId[id] else {
-                                fatalError("inconsistent state")
-                            }
-                            
-                            return [
-                                "id": id.value,
-                                "text": note.text
-                            ]
-                        }
-                        
-                        commonNotes.setValue(notes)
-                    }
-                    
-                    commonNotes.observe(.value, with: handleData)
-                }
-            }
-        }
-        
         let viewControllers = ViewControllers(window: window!)
         
-        connectFirebase()
         connectPersonalNotes(viewController: viewControllers.personalNotesTableViewConotoller)
         connectCommonNotes(viewController: viewControllers.commonNotesTableViewConotoller)
         

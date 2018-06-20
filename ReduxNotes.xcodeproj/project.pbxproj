@@ -12,7 +12,6 @@
 		DE174BC820DA60A600941C63 /* NewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE174BC720DA60A600941C63 /* NewNote.swift */; };
 		DE174BCA20DA611E00941C63 /* UpdateNewNoteText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE174BC920DA611E00941C63 /* UpdateNewNoteText.swift */; };
 		DE174BCC20DA639400941C63 /* ClearNewNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE174BCB20DA639400941C63 /* ClearNewNote.swift */; };
-		DE174BCE20DADC6800941C63 /* UpdateCommonNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE174BCD20DADC6800941C63 /* UpdateCommonNotes.swift */; };
 		DE1AD32C20D6A02B00A884F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1AD32B20D6A02B00A884F0 /* AppDelegate.swift */; };
 		DE1AD33120D6A02B00A884F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE1AD32F20D6A02B00A884F0 /* Main.storyboard */; };
 		DE1AD33320D6A02B00A884F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE1AD33220D6A02B00A884F0 /* Assets.xcassets */; };
@@ -43,7 +42,6 @@
 		DE174BC720DA60A600941C63 /* NewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewNote.swift; sourceTree = "<group>"; };
 		DE174BC920DA611E00941C63 /* UpdateNewNoteText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNewNoteText.swift; sourceTree = "<group>"; };
 		DE174BCB20DA639400941C63 /* ClearNewNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearNewNote.swift; sourceTree = "<group>"; };
-		DE174BCD20DADC6800941C63 /* UpdateCommonNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCommonNotes.swift; sourceTree = "<group>"; };
 		DE1AD32820D6A02B00A884F0 /* ReduxNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1AD32B20D6A02B00A884F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE1AD33020D6A02B00A884F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 				DE1AD35520D7E75000A884F0 /* AddPersonalNote.swift */,
 				DE1AD35720D7E75900A884F0 /* AddCommonNote.swift */,
 				DE174BC920DA611E00941C63 /* UpdateNewNoteText.swift */,
-				DE174BCD20DADC6800941C63 /* UpdateCommonNotes.swift */,
 				DE174BCB20DA639400941C63 /* ClearNewNote.swift */,
 			);
 			path = Actions;
@@ -337,7 +334,6 @@
 				DE174BC620DA602100941C63 /* NewNotePresenter.swift in Sources */,
 				DE174BC820DA60A600941C63 /* NewNote.swift in Sources */,
 				DE1AD32C20D6A02B00A884F0 /* AppDelegate.swift in Sources */,
-				DE174BCE20DADC6800941C63 /* UpdateCommonNotes.swift in Sources */,
 				DE1AD34D20D6FF3700A884F0 /* State.swift in Sources */,
 				DE1AD35F20D7FA2100A884F0 /* CommonNotesTablePreseneter.swift in Sources */,
 				DE1AD35D20D7F7AA00A884F0 /* PersonalNotesTablePresenter.swift in Sources */,

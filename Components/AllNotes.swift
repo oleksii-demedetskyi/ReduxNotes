@@ -16,15 +16,6 @@ func reduce(state: AllNotes, _ action: Action) -> AllNotes {
         notes[AllNotes.Id(value: action.id)] = Note(text: action.text)
         return AllNotes(byId: notes)
         
-    case let action as UpdateCommonNotes:
-        var notes = [:] as [AllNotes.Id: Note]
-        action.notes.forEach { info in
-            notes[AllNotes.Id(value: info.id)] = Note(text: info.text)
-        }
-        
-        return AllNotes(byId: notes)
-
-        
     default:
         return state
     }
