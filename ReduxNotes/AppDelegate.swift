@@ -44,21 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         func connectNewNote(viewController: UIViewController, context: NewNotePresenter.Context) {
-            guard let navigationVC = viewController as? UINavigationController else {
-                fatalError("cannot present not to navigation")
-            }
-            
-            guard let newNoteVC = navigationVC.topViewController as? NewNoteViewController else {
-                fatalError("cannot present new note to view controller: \(viewController)")
-            }
-            
-            let presenter = NewNotePresenter(
-                render: CommandWith(action: newNoteVC.render).dispatched(on: .main),
-                dispatch: CommandWith(action: store.dispatch),
-                context: context
-            )
-            
-            store.observe(with: presenter.present)
+            // TODO
         }
         
         func connectPersonalNotes(viewController: NotesTableViewController) {
